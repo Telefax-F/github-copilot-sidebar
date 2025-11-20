@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "GitHub Copilot Sidebar",
   "version": "1.0",
-  "description": "Access GitHub Copilot directly from the Firefox sidebar.",
+  "description": "Access GitHub Copilot chat directly in Firefox's sidebar.",
   "permissions": ["storage"],
   "icons": {
     "48": "icons/copilot-icon-48.png",
@@ -10,7 +10,7 @@
   },
   "sidebar_action": {
     "default_icon": "icons/copilot-icon-48.png",
-    "default_title": "GitHub Copilot",
+    "default_title": "GitHub Copilot Chat",
     "default_panel": "sidebar.html"
   }
 }
