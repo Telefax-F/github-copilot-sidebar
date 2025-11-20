@@ -1,91 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GitHub Copilot Sidebar</title>
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url=https://github.com/copilot">
+    <title>GitHub Copilot</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            width: 100%;
-            background: #0d1117;
-            color: #f0f6fc;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .loading-container {
+        body {
+            font-family: system-ui, sans-serif;
             text-align: center;
+            padding: 50px 20px;
+            background: #f6f8fa;
+            color: #24292f;
         }
-        
-        .logo {
-            font-size: 48px;
-            margin-bottom: 16px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 0.6; }
-            50% { opacity: 1; }
-            100% { opacity: 0.6; }
-        }
-        
-        h1 {
+        .loading {
             font-size: 18px;
-            margin-bottom: 8px;
-            color: #f0f6fc;
+            margin-bottom: 20px;
         }
-        
-        .loading-text {
-            font-size: 14px;
-            color: #8b949e;
-        }
-        
-        .manual-link {
-            margin-top: 20px;
-        }
-        
-        .manual-link a {
-            color: #58a6ff;
+        .link {
+            color: #0969da;
             text-decoration: none;
-            font-size: 14px;
-            padding: 8px 16px;
-            border: 1px solid #58a6ff;
-            border-radius: 6px;
-            transition: all 0.2s;
         }
-        
-        .manual-link a:hover {
-            background: #58a6ff;
-            color: #0d1117;
+        .link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="loading-container">
-        <div class="logo">🤖</div>
-        <h1>GitHub Copilot</h1>
-        <p class="loading-text">Redirecting to GitHub Copilot...</p>
-        <div class="manual-link">
-            <a href="https://github.com/copilot" target="_top">Click here if not redirected</a>
-        </div>
-    </div>
+    <div class="loading">Loading GitHub Copilot...</div>
+    <p><a href="https://github.com/copilot" class="link">Click here if not redirected</a></p>
     
     <script>
-        // Multiple redirect methods for maximum compatibility
         setTimeout(() => {
             window.location.replace('https://github.com/copilot');
         }, 100);
-        
-        // Fallback
-        setTimeout(() => {
-            window.top.location.href = 'https://github.com/copilot';
-        }, 500);
     </script>
 </body>
 </html>
